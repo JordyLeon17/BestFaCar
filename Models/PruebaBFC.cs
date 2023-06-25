@@ -21,5 +21,6 @@ namespace PruebaBestfacar.Models
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Carrosel> Carrosel { get; set; }
         public DbSet<RolUsuario> RolUsuarios { get; set; }
+        public DbSet<Calificacion> Calificacion { get; set; }
     }
 }

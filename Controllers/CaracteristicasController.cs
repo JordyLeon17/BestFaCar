@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using PruebaBestfacar.Models;
 using PruebaBestfacar.Permisos;
+using System.IO;
+
 
 namespace PruebaBestfacar.Controllers
 {
@@ -42,7 +44,7 @@ namespace PruebaBestfacar.Controllers
         // GET: Caracteristicas/Create
         public ActionResult Create()
         {
-            ViewBag.VehiculoID = new SelectList(db.Vehiculo, "VehiculoID", "Marca");
+            ViewBag.VehiculoID = new SelectList(db.Vehiculo, "VehiculoID", "Modelo");
             return View();
         }
 
@@ -51,7 +53,7 @@ namespace PruebaBestfacar.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CaracteristicasID,VehiculoID,Descripcion,Direccion")] Caracteristicas caracteristicas)
+        public ActionResult Create([Bind(Include = "caracteristicasID,VehiculoID,descripcion,direccion")] Caracteristicas caracteristicas)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +62,7 @@ namespace PruebaBestfacar.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.VehiculoID = new SelectList(db.Vehiculo, "VehiculoID", "Marca", caracteristicas.VehiculoID);
+            ViewBag.VehiculoID = new SelectList(db.Vehiculo, "VehiculoID", "Modelo", caracteristicas.VehiculoID);
             return View(caracteristicas);
         }
 
@@ -76,7 +78,7 @@ namespace PruebaBestfacar.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.VehiculoID = new SelectList(db.Vehiculo, "VehiculoID", "Marca", caracteristicas.VehiculoID);
+            ViewBag.VehiculoID = new SelectList(db.Vehiculo, "VehiculoID", "Modelo", caracteristicas.VehiculoID);
             return View(caracteristicas);
         }
 
@@ -85,7 +87,7 @@ namespace PruebaBestfacar.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CaracteristicasID,VehiculoID,Descripcion,Direccion")] Caracteristicas caracteristicas)
+        public ActionResult Edit([Bind(Include = "caracteristicasID,VehiculoID,descripcion,direccion")] Caracteristicas caracteristicas)
         {
             if (ModelState.IsValid)
             {

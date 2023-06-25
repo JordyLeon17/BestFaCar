@@ -12,10 +12,10 @@ namespace PruebaBestfacar.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CaracteristicasID { get; set; }
+        public int caracteristicasID { get; set; }
         public int VehiculoID { get; set; }
-        public string Descripcion { get; set; }
-        public string Direccion { get; set; }
+        public string descripcion { get; set; }
+        public string direccion { get; set; }
         public virtual Vehiculo Vehiculo { get; set; }
     }
 }

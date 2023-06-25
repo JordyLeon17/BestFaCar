@@ -1,7 +1,7 @@
 ﻿@model PruebaBestfacar.Models.Caracteristicas
 
 @{
-    ViewBag.Tittle = "Details";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -25,25 +25,25 @@
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.Descripcion)
+                @Html.DisplayNameFor(model => model.descripcion)
             </dt>
     
             <dd>
-                @Html.DisplayFor(model => model.Descripcion)
+                @Html.DisplayFor(model => model.descripcion)
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.Direccion)
+                @Html.DisplayNameFor(model => model.direccion)
             </dt>
     
             <dd>
-                @Html.DisplayFor(model => model.Direccion)
+                @Html.DisplayFor(model => model.direccion)
             </dd>
     
         </dl>
     </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.CaracteristicasID }) |
+        @Html.ActionLink("Edit", "Edit", new { id = Model.caracteristicasID }) |
         @Html.ActionLink("Back to List", "Index")
     </p>
 </body>

@@ -37,5 +37,7 @@ namespace PruebaBestfacar.Models
         public virtual ICollection<Neumaticos> Neumaticos { get; set; }
         public virtual ICollection<Frenos> Frenos { get; set; }
         public virtual ICollection<Motor> Motor { get; set; }
+        public virtual ICollection<Calificacion> Calificaciones { get; set; }
+
     }
 }

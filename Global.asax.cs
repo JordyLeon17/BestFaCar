@@ -18,4 +18,7 @@ namespace PruebaBestfacar
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
+
 }
+
+
