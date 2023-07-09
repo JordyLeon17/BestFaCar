@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using Newtonsoft.Json;
 
 namespace PruebaBestfacar.Models
 {
@@ -29,14 +30,23 @@ namespace PruebaBestfacar.Models
         //[Required(ErrorMessage = "*Campo Requerido"), Display(Name = "Nombre de Imagen")]
         public string NombreImagen { get; set; }
         [Display(Name = "Imagen del Vehiculo"), DataType(DataType.Upload)]
+        [JsonIgnore]
         public byte[] Imagen { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Caracteristicas> Caracteristicas { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Transmision> Transmision { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Suspension> Suspension { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Capacidades> Capacidades { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Neumaticos> Neumaticos { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Frenos> Frenos { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Motor> Motor { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Calificacion> Calificaciones { get; set; }
 
     }

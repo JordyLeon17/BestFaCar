@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -101,7 +102,7 @@
                     <li> @Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li> @Html.ActionLink("Visualizar Vehiculos", "Index", "Home/VisualizarVehiculos")</li>
                     <li> @Html.ActionLink("Comparar Vehiculos", "Index", "Home/VehiculosPresentacion")</li>
-                    <li> @Html.ActionLink("Reporte", "Index","Home/Reporte")</li>
+                    <li> @Html.ActionLink("Reporte", "Index", "Home/Reporte")</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Administrador <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -118,23 +119,25 @@
             </div>
         </div>
     </nav>
-    <br>
-    <br>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <center>
-                    <br><img width="200" height="50" src="~/Content/logo/logoblanco2.png" />
-                    <br><p>&copy; @DateTime.Now.Year - Mi aplicación BestFaCar</p>
-                </center>
-            </footer>
-        </div>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
+
+    <br>
+    <br>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <center>
+                <br><img width="200" height="50" src="~/Content/logo/logoblanco2.png" />
+                <br><p>&copy; @DateTime.Now.Year - Mi aplicación BestFaCar</p>
+            </center>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
 </body>
 </html>
